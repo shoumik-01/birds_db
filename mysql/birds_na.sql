@@ -32,7 +32,7 @@ VALUES
 ('Red-bellied Woodpecker', 'Melanerpes carolinus', '74g', '24.8cm'),
 ('American kestrel', 'Falco sparverius', '120g', '26.5cm'),
 ('Ruby-throated hummingbird', 'Archilochus colubris', '3.6g', '8cm'),
-('Carolina wren', 'Thryothorus ludovicianus', '20.5g', '26.5cm'),
+('Carolina wren', 'Thryothorus ludovicianus', '20.5g', '13.3cm'),
 ('Spotted Towhee', 'Pipilo maculatus', '41g', '19cm'),
 ('Lesser Goldfinch', 'Spinus psaltria', '9.8g', '10.5cm'),
 ('Barn swallow', 'Hirundo rustica', '19g', '18cm'),
