@@ -20,7 +20,7 @@ $birdName = $_GET['birdName'] ?? '';
 $birdNameWithoutDashes = str_replace('-', ' ', $birdName);
 
 // Prepare and execute the SQL query to fetch bird information
-$sql = "SELECT scientific_name, weight, length FROM birds WHERE REPLACE(common_name, '-', ' ') LIKE ? LIMIT 1";
+$sql = "SELECT ID, scientific_name, weight, length FROM birds WHERE REPLACE(common_name, '-', ' ') LIKE ? LIMIT 1";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $birdNameWithoutDashes);
 $stmt->execute();
