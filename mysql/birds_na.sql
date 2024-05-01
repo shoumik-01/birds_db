@@ -69,4 +69,14 @@ VALUES
 ('Gila woodpecker', 'Melanerpes uropygialis', '65.2g', '22.5cm'),
 ('Emerald toucanet', 'Aulacorhynchus prasinus', '195g', '33cm'),
 ('Eastern meadowlark', 'Sturnella magna', '113g', '23.5cm'),
-('Yellow-bellied sapsucker', 'Sphyrapicus varius', '50.3g', '20cm');
+('Yellow-bellied sapsucker', 'Sphyrapicus varius', '50.3g', '20cm'),
+('Belted kingfisher', 'Megaceryle alcyon', '145.5g', '31.5cm'),
+('Band-tailed pigeon', 'Patagioenas fasciata', '370g', '36.5cm'),
+('Barred owl', 'Strix varia', '800g', '51.5cm'),
+('Nashville warbler', 'Leiothlypis ruficapilla', '10g', '12cm'),
+('Cerulean warbler', 'Setophaga cerulea', '9g', '11cm'),
+('American golden plover', 'Pluvialis dominica', '158g', '26cm'),
+('Arctic warbler', 'Phylloscopus borealis', '9.6g', '12cm'),
+('Atlantic puffin', 'Fratercula arctica', '499g', '31.5cm'),
+('Blue mockingbird', 'Melanotis caerulescens', '55g', '10cm'),
+('Blue-winged warbler', 'Vermivora cyanoptera', '8.5g', '11.5cm');
