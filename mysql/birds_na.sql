@@ -65,7 +65,7 @@ VALUES
 ('Crested caracara', 'Caracara plancus', '1250g', '57.5cm'),
 ('Curve-billed thrasher', 'Toxostoma curvirostre', '77g', '27.5cm'),
 ('Dunlin', 'Calidris alpina', '62.4g', '19cm'),
-('Canada Jay', 'Perisoreus canadensis', '11g', '12cm'),
+('Canada Jay', 'Perisoreus canadensis', '67.5g', '29cm'),
 ('Gila woodpecker', 'Melanerpes uropygialis', '65.2g', '22.5cm'),
 ('Emerald toucanet', 'Aulacorhynchus prasinus', '195g', '33cm'),
 ('Eastern meadowlark', 'Sturnella magna', '113g', '23.5cm'),
