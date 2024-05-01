@@ -29,7 +29,11 @@
                 const data = await response.json();
 
                 if (response.ok) {
-                    resultDiv.textContent = `Scientific Name: ${data.scientific_name}, Weight: ${data.weight}, Length: ${data.length}`;
+                    resultDiv.innerHTML = `
+                        <p style="font-weight: bold; font-size: 14px;">Scientific Name: ${data.scientific_name}</p>
+                        <p style="font-weight: bold; font-size: 14px;">Avg. Weight: ${data.weight}</p>
+                        <p style="font-weight: bold; font-size: 14px;">Avg. Length: ${data.length}</p>
+                    `;
                 } else {
                     resultDiv.textContent = 'Bird not found';
                 }
