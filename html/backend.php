@@ -16,10 +16,13 @@ if ($conn->connect_error) {
 // Get the bird name from the query string
 $birdName = $_GET['birdName'] ?? '';
 
+// Remove dashes from the bird name
+$birdNameWithoutDashes = str_replace('-', ' ', $birdName);
+
 // Prepare and execute the SQL query to fetch bird information
-$sql = "SELECT scientific_name, weight, length FROM birds WHERE common_name LIKE ? LIMIT 1";
+$sql = "SELECT scientific_name, weight, length FROM birds WHERE REPLACE(common_name, '-', ' ') LIKE ? LIMIT 1";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $birdName);
+$stmt->bind_param("s", $birdNameWithoutDashes);
 $stmt->execute();
 $result = $stmt->get_result();
 
