@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Search</title>
+</head>
+<body>
+    <h1>Bird Search</h1>
+    <form id="birdForm">
+        <label for="birdName">Name of the bird:</label>
+        <input type="text" id="birdName" name="birdName" maxlength="100" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById('birdForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const birdName = formData.get('birdName');
+
+            try {
+                const response = await fetch(`backend.php?birdName=${encodeURIComponent(birdName)}`);
+                const data = await response.json();
+
+                if (response.ok) {
+                    resultDiv.textContent = `Scientific Name: ${data.scientific_name}, Weight: ${data.weight}, Length: ${data.length}`;
+                } else {
+                    resultDiv.textContent = 'Bird not found';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
