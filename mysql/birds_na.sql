@@ -2,10 +2,10 @@ CREATE DATABASE BIRDS_NA;
 USE BIRDS_NA;
 CREATE TABLE birds (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    common_name VARCHAR(100),
-    scientific_name VARCHAR(100),
-    weight VARCHAR(10),
-    length VARCHAR(10)
+    common_name VARCHAR(100) NOT NULL,
+    scientific_name VARCHAR(100) NOT NULL,
+    weight VARCHAR(10) NOT NULL,
+    length VARCHAR(10) NOT NULL
 );
 
 INSERT INTO birds (common_name, scientific_name, weight, length)
