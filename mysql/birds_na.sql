@@ -13,7 +13,7 @@ VALUES
 ('American Robin', 'Turdus migratorius', '77g', '25.5cm'),
 ('Northern Cardinal', 'Cardinalis cardinalis', '44.8g', '23.5cm'),
 ('Blue Jay', 'Cyanocitta cristata', '92.4g', '26cm'),
-('Steller's Jay', 'Cyanocitta stelleri', '120g', '32cm'),
+('Steller''s Jay', 'Cyanocitta stelleri', '120g', '32cm'),
 ('Mourning Dove', 'Zenaida macroura', '128g', '31cm'),
 ('American Crow', 'Corvus brachyrhynchos', '468g', '46.5cm'),
 ('European Starling', 'Sturnus vulgaris', '79.5g', '21cm'),
