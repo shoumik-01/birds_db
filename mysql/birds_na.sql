@@ -79,4 +79,9 @@ VALUES
 ('Arctic warbler', 'Phylloscopus borealis', '9.6g', '12cm'),
 ('Atlantic puffin', 'Fratercula arctica', '499g', '31.5cm'),
 ('Blue mockingbird', 'Melanotis caerulescens', '55g', '10cm'),
-('Blue-winged warbler', 'Vermivora cyanoptera', '8.5g', '11.5cm');
+('Blue-winged warbler', 'Vermivora cyanoptera', '8.5g', '11.5cm'),
+('Scarlet Tanager', 'Piranga olivacea', '25g', '17.5cm'),
+('Western Tanager', 'Piranga ludoviciana', '25g', '17.5cm'),
+('American Wigeon', 'Mareca americana', '935g', '50.5cm'),
+('Painted bunting', 'Passerina ciris', '16g', '13cm'),
+('Rose-breasted grosbeak', 'Pheucticus ludovicianus', '45g', '20cm');
