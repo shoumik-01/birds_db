@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bird Search</title>
+    <style>
+        body {
+            font-family: 'Georgia Pro', serif;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <h1>Bird Search</h1>
     <form id="birdForm">
-        <label for="birdName">Name of the bird:</label>
+        <label for="birdName">Enter bird name:</label>
         <input type="text" id="birdName" name="birdName" maxlength="100" required>
         <button type="submit">Search</button>
     </form>
-    <div id="result"></div>
+    <div id="result">
+    </div>
 
     <script>
         const form = document.getElementById('birdForm');
@@ -30,9 +37,9 @@
 
                 if (response.ok) {
                     resultDiv.innerHTML = `
-                        <p style="font-weight: bold; font-size: 14px;">Scientific Name: ${data.scientific_name}</p>
-                        <p style="font-weight: bold; font-size: 14px;">Avg. Weight: ${data.weight}</p>
-                        <p style="font-weight: bold; font-size: 14px;">Avg. Length: ${data.length}</p>
+                        <p style="font-weight: bold;">Scientific Name: ${data.scientific_name}</p>
+                        <p style="font-weight: bold;">Avg. Weight: ${data.weight}</p>
+                        <p style="font-weight: bold;">Avg. Length: ${data.length}</p>
                         <img src="${data.ID}.jpg" alt="Bird Image" style="max-width: 100%;">
                     `;
                 } else {
