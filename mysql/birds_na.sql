@@ -84,4 +84,9 @@ VALUES
 ('Western Tanager', 'Piranga ludoviciana', '25g', '17.5cm'),
 ('American Wigeon', 'Mareca americana', '935g', '50.5cm'),
 ('Painted bunting', 'Passerina ciris', '16g', '13cm'),
-('Rose-breasted grosbeak', 'Pheucticus ludovicianus', '45g', '20cm');
+('Rose-breasted grosbeak', 'Pheucticus ludovicianus', '45g', '20cm'),
+('American goshawk', 'Accipiter atricapillus', '997.5g', '58.5cm'),
+('Bald Eagle', 'Haliaeetus leucocephalus', '4850g', '86cm'),
+('Golden Eagle', 'Aquila chrysaetos canadensis', '4295g', '84cm'),
+('Merlin', 'Falco columbarius', '206g', '28.5cm'),
+('Peregrine falcon', 'Falco peregrinus', '800g', '42.5cm');
