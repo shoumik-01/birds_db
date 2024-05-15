@@ -89,4 +89,14 @@ VALUES
 ('Bald Eagle', 'Haliaeetus leucocephalus', '4850g', '86cm'),
 ('Golden Eagle', 'Aquila chrysaetos canadensis', '4295g', '84cm'),
 ('Merlin', 'Falco columbarius', '206g', '28.5cm'),
-('Peregrine falcon', 'Falco peregrinus', '800g', '42.5cm');
+('Peregrine falcon', 'Falco peregrinus', '800g', '42.5cm'),
+('Black-throated Blue Warbler', 'Setophaga caerulescens', '10g', '12cm'),
+('Blackburnian Warbler', 'Setophaga fusca', '11g', '12cm'),
+('Louisiana Waterthrush', 'Parkesia motacilla', '20.5g', '15.5cm'),
+('Ovenbird', 'Seiurus aurocapilla', '22g', '13.5cm'),
+('Golden-winged Warbler', 'Vermivora chrysoptera', '9.5g', '13cm'),
+('Black-and-white Warbler', 'Mniotilta varia', '11.5g', '12cm'),
+('Prothonotary Warbler', 'Protonotaria citrea', '12.5g', '13cm'),
+('Great Horned Owl', 'Bubo virginianus', '1700g', '55cm'),
+('Snowy Owl', 'Bubo scandiacus', '2275g', '62cm'),
+('Barn Owl', 'Tyto alba', '550g', '36cm');
