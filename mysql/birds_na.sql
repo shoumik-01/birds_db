@@ -99,4 +99,14 @@ VALUES
 ('Prothonotary Warbler', 'Protonotaria citrea', '12.5g', '13cm'),
 ('Great Horned Owl', 'Bubo virginianus', '1700g', '55cm'),
 ('Snowy Owl', 'Bubo scandiacus', '2275g', '62cm'),
-('Barn Owl', 'Tyto alba', '550g', '36cm');
+('Barn Owl', 'Tyto alba', '550g', '36cm'),
+('Red-breasted nuthatch', 'Sitta canadensis', '9.9g', '11cm'),
+('Northern flicker', 'Colaptes auratus', '127g', '32cm'),
+('Purple martin', 'Progne subis', '52.5g', '19.5cm'),
+('Carolina chickadee', 'Poecile carolinensis', '11g', '12cm'),
+('Osprey', 'Pandion haliaetus', '1700g', '58cm'),
+('Florida scrub jay', 'Aphelocoma coerulescens', '80.2g', '25.5cm'),
+('Yellow-billed magpie', 'Pica nuttalli', '160g', '48.5cm'),
+('Western bluebird', 'Sialia mexicana', '27.5g', '17cm'),
+('Snow Bunting', 'Plectrophenax nivalis', '35g', '15cm'),
+('Summer tanager', 'Piranga rubra', '30.1g', '17cm');
