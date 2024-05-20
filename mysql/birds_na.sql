@@ -78,7 +78,7 @@ VALUES
 ('American golden plover', 'Pluvialis dominica', '158g', '26cm'),
 ('Arctic warbler', 'Phylloscopus borealis', '9.6g', '12cm'),
 ('Atlantic puffin', 'Fratercula arctica', '499g', '31.5cm'),
-('Blue mockingbird', 'Melanotis caerulescens', '55g', '10cm'),
+('Blue mockingbird', 'Melanotis caerulescens', '55g', '25.5cm'),
 ('Blue-winged warbler', 'Vermivora cyanoptera', '8.5g', '11.5cm'),
 ('Scarlet Tanager', 'Piranga olivacea', '25g', '17.5cm'),
 ('Western Tanager', 'Piranga ludoviciana', '25g', '17.5cm'),
