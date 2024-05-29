@@ -9,21 +9,48 @@
             font-family: 'Georgia Pro', serif;
             font-size: 16px;
         }
+
+        .form-inline {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-inline label {
+            margin-right: 10px;
+        }
+
+        .form-inline input {
+            margin-right: 10px;
+        }
+
+        .form-inline button {
+            margin-right: 10px;
+        }
+
+        .or-separator {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>Bird Search</h1>
-    <form id="birdForm">
-        <label for="birdName">Enter bird name:</label>
-        <input type="text" id="birdName" name="birdName" maxlength="100" required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="form-inline">
+        <form id="birdForm" class="form-inline">
+            <label for="birdName">Enter bird name:</label>
+            <input type="text" id="birdName" name="birdName" maxlength="100" required>
+            <button type="submit">Search</button>
+        </form>
+        <span class="or-separator">OR</span>
+        <button id="randomBirdButton">Pick a random bird</button>
+    </div>
     <div id="result">
     </div>
 
     <script>
         const form = document.getElementById('birdForm');
         const resultDiv = document.getElementById('result');
+        const randomBirdButton = document.getElementById('randomBirdButton');
 
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
@@ -37,6 +64,27 @@
 
                 if (response.ok) {
                     resultDiv.innerHTML = `
+                        <p style="font-weight: bold;">Scientific Name: ${data.scientific_name}</p>
+                        <p style="font-weight: bold;">Avg. Weight: ${data.weight}</p>
+                        <p style="font-weight: bold;">Avg. Length: ${data.length}</p>
+                        <img src="${data.ID}.jpg" alt="Bird Image" style="max-width: 100%;">
+                    `;
+                } else {
+                    resultDiv.textContent = 'Bird not found';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+
+        randomBirdButton.addEventListener('click', async () => {
+            try {
+                const response = await fetch('backend.php?random=true');
+                const data = await response.json();
+
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <p style="font-weight: bold;">Common Name: ${data.common_name}</p>
                         <p style="font-weight: bold;">Scientific Name: ${data.scientific_name}</p>
                         <p style="font-weight: bold;">Avg. Weight: ${data.weight}</p>
                         <p style="font-weight: bold;">Avg. Length: ${data.length}</p>
