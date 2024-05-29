@@ -13,27 +13,50 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Get the bird name from the query string
-$birdName = $_GET['birdName'] ?? '';
+// Check if the random bird button was clicked
+if (isset($_GET['random']) && $_GET['random'] == 'true') {
+    // Generate a random bird ID
+    $randomID = rand(1, 100);
 
-// Remove dashes from the bird name
-$birdNameWithoutDashes = str_replace('-', ' ', $birdName);
+    // Prepare and execute the SQL query to fetch random bird information
+    $sql = "SELECT ID, common_name, scientific_name, weight, length FROM birds WHERE ID = ? LIMIT 1";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $randomID);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-// Prepare and execute the SQL query to fetch bird information
-$sql = "SELECT ID, scientific_name, weight, length FROM birds WHERE REPLACE(common_name, '-', ' ') LIKE ? LIMIT 1";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $birdNameWithoutDashes);
-$stmt->execute();
-$result = $stmt->get_result();
-
-// Check if a matching bird was found
-if ($result->num_rows > 0) {
-    // Fetch and output bird information
-    $row = $result->fetch_assoc();
-    echo json_encode($row);
+    // Check if a bird was found
+    if ($result->num_rows > 0) {
+        // Fetch and output bird information
+        $row = $result->fetch_assoc();
+        echo json_encode($row);
+    } else {
+        // No matching bird found
+        echo json_encode(['error' => 'Bird not found']);
+    }
 } else {
-    // No matching bird found
-    echo json_encode(['error' => 'Bird not found']);
+    // Get the bird name from the query string
+    $birdName = $_GET['birdName'] ?? '';
+
+    // Remove dashes from the bird name
+    $birdNameWithoutDashes = str_replace('-', ' ', $birdName);
+
+    // Prepare and execute the SQL query to fetch bird information
+    $sql = "SELECT ID, scientific_name, weight, length FROM birds WHERE REPLACE(common_name, '-', ' ') LIKE ? LIMIT 1";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $birdNameWithoutDashes);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if a matching bird was found
+    if ($result->num_rows > 0) {
+        // Fetch and output bird information
+        $row = $result->fetch_assoc();
+        echo json_encode($row);
+    } else {
+        // No matching bird found
+        echo json_encode(['error' => 'Bird not found']);
+    }
 }
 
 // Close database connection
